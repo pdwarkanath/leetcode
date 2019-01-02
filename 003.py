@@ -25,15 +25,15 @@ class Solution:
         :type s: str
         :rtype: int
         """
-        result = []
-        tmp = []
+        result = ''
+        tmp = ''
         for i in s:
             if i in tmp:
                 if len(result) < len(tmp):
                     result = tmp
-                tmp = tmp[tmp.index(i)+1:] + [i]
+                tmp = tmp[tmp.index(i)+1:] + i
             else:
-                tmp.append(i)
+                tmp+=i
         if len(result) < len(tmp):
             result = tmp
         return len(result)
