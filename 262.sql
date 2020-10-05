@@ -44,7 +44,7 @@ For the above tables, your SQL query should return the following rows with the c
 
 */
 
-# Write your MySQL query statement below
+/* Write your MySQL query statement below */
 
 SELECT A.Request_at AS Day, ROUND(SUM(CASE WHEN A.Status LIKE 'cancelled%' THEN 1 ELSE 0 END)/COUNT(*), 2) AS "Cancellation Rate"
 FROM
